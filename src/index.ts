@@ -1,3 +1,4 @@
-export function sayHello(name: string) {
-  return `Hey ${name}, say hello to TypeScript.`;
-}
+import withBookSocket from './hooks/withBookSocket';
+import { BITFINEX, BINANCE } from './utils/types';
+
+export { withBookSocket, BITFINEX, BINANCE };

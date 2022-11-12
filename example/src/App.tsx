@@ -2,7 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { withBookSocket, BITFINEX } from 'crypto-socket';
+
 function App() {
+  withBookSocket({ exchange: BITFINEX });
   return (
     <div className="App">
       <header className="App-header">

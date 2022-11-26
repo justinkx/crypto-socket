@@ -7,5 +7,6 @@ export function connect(url: string): WebSocket {
   }
 
   WEBSOCKET = new WebSocket(url);
+  URL = url;
   return WEBSOCKET;
 }

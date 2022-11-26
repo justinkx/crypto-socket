@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { withBookSocket, BITFINEX } from 'crypto-socket';
+import { withBookSocket, BITFINEX } from './crypto-socket/index';
+import Child from './Child';
 
 function App() {
-  withBookSocket({ exchange: BITFINEX });
+  const bookData = withBookSocket({
+    exchange: BITFINEX,
+    symbol: 'tBTCUSD',
+  });
   return (
     <div className="App">
       <header className="App-header">
@@ -21,6 +25,7 @@ function App() {
         >
           Learn React
         </a>
+        {/* <Child /> */}
       </header>
     </div>
   );
